@@ -1,0 +1,19 @@
+29: abcdefghijklmnopqrstuvwxyzæøå
+23: bcdfghjklmnpqrstvwxzæøå
+
+Encoding: Focus on unique wovels æøå
+
+For simplicity's sake we support only lowercase letters
+
+ØTF-2:
+00 æ
+01 ø
+10 å
+11 one of the 20 consonants or 12 other characters in 5 bits
+
+other 11 characters: ' ', '.', ',', '!', '?', ':', ';', '"', '(', ')', '/'
+one left for future extensions
+
+so either 2 bits in the best case, or 2 + 5 = 7 bits in the general case
+
+also replace any number of subsequent similar wovels with a single target wovel
