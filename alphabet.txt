@@ -17,3 +17,4 @@ one left for future extensions
 so either 2 bits in the best case, or 2 + 5 = 7 bits in the general case
 
 also replace any number of subsequent similar wovels with a single target wovel
+because e.g. "officiel" would be annoying if it was "øffæcææl"
