@@ -9,12 +9,12 @@ from collections import defaultdict
 def to_dænsk(s):
     return re.sub(r'a+', 'å', re.sub(r'[ou]+', 'ø', re.sub(r'[eiy]+', 'æ', s.lower())))
 
-words = defaultdict(list)
+words = defaultdict(set)
 
 for line in sys.stdin:
     dansk = line.rstrip()
     dænsk = to_dænsk(dansk)
-    words[dænsk].append(dansk)
+    words[dænsk].add(dansk)
 
 n_ambigious = 0
 for dænsk, dansks in words.items():
